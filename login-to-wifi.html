@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/logo-dark.png" type="image/x-icon">
+
+    <!-- Normalise CSS -->
+    <link rel="stylesheet" href="css/normalise.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+
+
+<!-- Header -->
+<header>
+    <nav class="navbar fixed-top navbar-expand-xxl py-2" id="separate-navbar">
+        <div class="container-fluid">
+            <div class="row w-100 align-items-center">
+
+                <!-- Logo -->
+                <div class="col-2 d-flex justify-content-start">
+                    <img src="images/logo-dark.png" alt="book logo" width="50" height="50">
+                </div>
+
+                <!-- Nav Links -->
+                <div class="col-8 d-flex justify-content-center">
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Getting Online
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="microsoft-setup.html">Microsoft 365 & Multi-Factor Authentication Setup</a></li>
+                                    <li><a class="dropdown-item" href="login-to-wifi.html">Login To Campus WIFI</a></li>
+                                    <li><a class="dropdown-item" href="access-blackboard.html">How To Access Blackboard</a></li>
+                                    <li><a class="dropdown-item" href="locating-timetable.html">Locating Your Timetable</a></li>
+                                    <li><a class="dropdown-item" href="password-help.html">Everything You Need To Know About Passwords</a></li>
+                                    <li><a class="dropdown-item" href="orientation.html">What Is Orientation</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Important Resources
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="library-printers.html">Using The Library Printers</a></li>
+                                    <li><a class="dropdown-item" href="student-portal.html">Accessing The Student Portal</a></li>
+                                    <li><a class="dropdown-item" href="online-resources.html">Online Resources</a></li>
+                                    <li><a class="dropdown-item" href="student-card.html">How Do I Get My Student Card</a></li>
+                                    <li><a class="dropdown-item" href="library-study-rooms.html">Using The Library Study Rooms</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Helpful Links
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="referencing.html">How To Reference Your Work Correctly</a></li>
+                                    <li><a class="dropdown-item" href="email-tips.html">Email Tips And Tricks</a></li>
+                                    <li><a class="dropdown-item" href="student-discount.html">Unlocking Student Discount On Your SmartRider</a></li>
+                                    <li><a class="dropdown-item" href="tafe-contacts.html">Useful Contacts At TAFE</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">Frequently Asked Questions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-2 d-flex justify-content-end" id="font-size-contrast-buttons">
+                    <!-- Toggler for offcanvas menu -->
+                    <button class="navbar-toggler d-xxl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="container collapse navbar-collapse justify-content-end" id="font-size-contrast-buttons">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Change Font Size
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!-- Font Size Buttons -->
+                                <button class="btn btn-font-size" type="button" id="increase-font-size-button">Increase Font Size</button>
+                                <button class="btn btn-font-size" type="button" id="decrease-font-size-button">Decrease Font Size</button>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Change Colour Contrast
+                            </button>
+                            <ul class="dropdown-menu">
+                                <!-- Contrast Buttons -->
+                                <button class="btn btn-contrast" type="button" id="increase-contrast-button">Increase Contrast</button>
+                                <button class="btn btn-contrast" type="button" id="decrease-contrast-button">Decrease Contrast</button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end d-xxl-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+
+            <!-- Header -->
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                            Getting Online
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="microsoft-setup.html">Microsoft 365 & Authenticator</a></li>
+                            <li><a class="dropdown-item" href="login-to-wifi.html">Login To Campus WIFI</a></li>
+                            <li><a class="dropdown-item" href="access-blackboard.html">How To Access Blackboard</a></li>
+                            <li><a class="dropdown-item" href="locating-timetable.html">Locating Your Timetable</a></li>
+                            <li><a class="dropdown-item" href="password-help.html">Password Help</a></li>
+                            <li><a class="dropdown-item" href="orientation.html">What Is Orientation</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                            Important Resources
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="library-printers.html">Using The Library Printers</a></li>
+                            <li><a class="dropdown-item" href="student-portal.html">Accessing The Student Portal</a></li>
+                            <li><a class="dropdown-item" href="online-resources.html">Online Resources</a></li>
+                            <li><a class="dropdown-item" href="student-card.html">How Do I Get My Student Card</a></li>
+                            <li><a class="dropdown-item" href="library-study-rooms.html">Using The Library Study Rooms</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                            Helpful Links
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="referencing.html">How To Reference Your Work Correctly</a></li>
+                            <li><a class="dropdown-item" href="email-tips.html">Email Tips And Tricks</a></li>
+                            <li><a class="dropdown-item" href="student-discount.html">Smart Rider Student Discount</a></li>
+                            <li><a class="dropdown-item" href="tafe-contacts.html">Useful Contacts At TAFE</a></li>
+                            <li><a class="dropdown-item" href="faq.html">Frequently Asked Questions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Font Size And Contrast Buttons -->
+            <div class="offcanvas-buttons container">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-font-size" type="button" id="offcanvas-increase-font-size-button">Increase Font Size</button>
+                        <button class="btn btn-contrast" type="button" id="offcanvas-increase-contrast-button">Increase Contrast</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-font-size" type="button" id="offcanvas-decrease-font-size-button">Decrease Font Size</button>
+                        <button class="btn btn-contrast" type="button" id="offcanvas-decrease-contrast-button">Decrease Contrast</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!-- Main -->
+<main class="container mt-3" id="login-to-wifi-main">
+    <noscript>Your browser does not have JavaScript enabled. Some features of this site will not be available.</noscript>
+    <h1 class="mb-5 text-center">Login To WIFI</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Warnings -->
+            <section class="col-12 col-lg-6 mb-4 animateLeft">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Warnings</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="warning-text">It may take up to 24-48 hours after completing your enrolment for your account to become active in all our online systems.</p>
+                        <p>Before you log onto the Campus WIFI you need to activate your student Microsoft 365. Instructions for which can be found at the bottom of this page and at <a href="microsoft-setup.html">Microsoft Setup</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Connect To The Student WIFI -->
+            <section class="col-12 col-lg-6 mb-4 animateRight">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Connect To The Studnet WIFI</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><span class="bold-text">iOS</span> - Settings > WiFi > NMT WiFi </li>
+                            <li><span class="bold-text">Android</span> - Settings > Network & Internet > WiFi > NMT WiFi </li>
+                            <li><span class="bold-text">Windows</span> - Click on the WiFi logo on the bottom right hand corner of the screen and select NMT WiFi </li>
+                            <li><span class="bold-text">MacOS</span> - Click on the  WiFi logo on the Menu bar, and select NMT WiFi from the list</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <!-- Login To The Student WIFI -->
+            <section class="col-12 col-lg-6 mb-4 animateLeft">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Login To The Studnet WIFI</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>The NMT WiFi login page should load automatically. If it doesn't, go to <a href="http://neverssl.com/" target="_blank">neverssl.com</a> to force the login page to appear.</p>
+                        <p>Enter your login details:</p>
+                        <div class="container mb-3">
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="bold-text">Username:</span>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="m-0">Student ID Number</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <span class="bold-text">Password:</span>
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class="m-0">Your Password (remember, you must change the default password first!)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Once you have logged in, you will not need to log in again for 90 days. However, you will need to log in again if you change your password during this time. If you have any issues connecting to the WiFi, take your device to your campus Library for assistance.</p>
+                        <p class="warning-text">Warning: If you are running a Bit Torrent when you try to log in to the WiFi your device will be quarantined and you will not be able to log in.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Password Expiry -->
+            <section class="col-12 col-lg-6 mb-4 animateRight">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Password Expiry</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Your password will expire every 6 months - <span class="bold-text">you MUST change it</span> before it expires or you will be locked out of all our online systems.</p>
+                        <p>You can change your password on a Student PC by using CTRL+ALT+DELETE and choosing Change a Password.</p>
+                        <p>Or via the settings in Microsoft 365 (student email) - click on the settings cog in the top right hand corner of your Microsoft 365 account and choose change your password.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <!-- Password Requirements -->
+            <section class="col-12 col-lg-6 mb-4 animateLeft">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Password Requirements</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Your new password can use any combination of letters or numbers but must be a minimum of 14 characters. </p>
+                        <p><span class="bold-text">Tip:</span> Use words or phrases you are going to remember. </p>
+                        <p>If you are having problems changing your password please contact your <a href="https://guides.dtwd.wa.gov.au/nmtafe-library/ContactUs" target="_blank">Campus Library</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Links -->
+            <section class="col-12 col-lg-6 mb-4 animateRight">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Helpful Links</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="https://northmetrotafe.libanswers.com/faq/269161" target="_blank">How do I access my Microsoft 365 / Student Email?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-muted pt-1" id="footer">
+
+    <section>
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <!-- Grid column -->
+                <!-- Business Information -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 pe-xl-2 pe-xs-0 text-dark">
+                    <h2 class="text-uppercase fw-bold mb-4 fs-6">
+                        <img src="images/logo-light.png" alt="book logo" width="25" height="25">
+                        NMT Library
+                    </h2>
+                    <p>Use this site to learn how to setup Microsoft 365, connect to the WIFI on campus, access Blackboard, find your timetable, use the library printers, view the most frequently asked questions and more.</p>
+                </div>
+        
+                <!-- Grid column -->
+                <!-- Navigation -->
+                <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mb-4 ps-xl-5 ps-xs-0 text-dark">
+                    <h2 class="text-uppercase fw-bold mb-4 fs-6">
+                        Navigation
+                    </h2>
+                    <p><a href="index.html" class="text-reset">Home</a></p>
+                    <p><a href="faq.html" class="text-reset">FAQ</a></p>
+                    <p><a href="contact.html" class="text-reset">Contact</a></p>
+                    <p><a href="sitemap.html" class="text-reset">Sitemap</a></p>
+                </div>
+        
+                <!-- Grid column -->
+                <!-- Useful Pages -->
+                <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4 ps-xl-3 ps-xs-0 text-dark">
+                    <h2 class="text-uppercase fw-bold mb-4 fs-6">
+                        Useful Pages
+                    </h2>
+                    <p><a href="microsoft-setup.html" class="text-reset">Microsoft Setup</a></p>
+                    <p><a href="login-to-wifi.html" class="text-reset">Login To WIFI</a></p>
+                    <p><a href="locating-timetable.html" class="text-reset">Locating Timetable</a></p>
+                    <p><a href="library-printers.html" class="text-reset">Library Printers</a></p>
+                    <p><a href="password-help.html" class="text-reset">TAFE Passwords</a></p>
+                </div>
+        
+                <!-- Grid column -->
+                <!-- Contacts -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-dark">
+                    <h2 class="text-uppercase fw-bold mb-4 fs-6">Get In Touch</h2>
+                    <p><i class="bi bi-building me-3"></i>25 Aberdeen Street, Perth WA 6000</p>
+                    <p><i class="bi bi-calendar me-3"></i>Monday - Friday 8am - 4pm</p>
+                    <p><i class="bi bi-telephone me-3"></i>1300 300 822</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <!-- Copyright -->
+    <div class="text-center p-4 text-dark" id="copyright-statement">
+        <p class="m-0">&copy;2025 NMT Library, All Rights Reserved</p>
+    </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

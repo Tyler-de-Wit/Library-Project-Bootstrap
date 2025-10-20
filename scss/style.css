@@ -1,0 +1,242 @@
+/*-------------------- Fonts --------------------*/
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/nunito-variablefont-weight.ttf");
+}
+/*-------------------- Global Styles --------------------*/
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: #2f2f2f;
+}
+
+main {
+  background-color: #ffffff;
+  min-height: 95vh;
+}
+
+.search-form input {
+  width: 30vw;
+}
+
+header {
+  height: 70px;
+}
+
+.high-contrast {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+.warning-text {
+  color: #ff0000;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 1.2s both;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeInRight {
+  animation: fadeInRight 1.2s both;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeInTop {
+  animation: fadeInTop 1.2s both;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*-------------------- Header --------------------*/
+.navbar .nav-item {
+  font-weight: 600;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 2px;
+}
+.navbar .nav-item:hover {
+  margin-bottom: 0;
+  border-bottom: 2px solid #ef476f;
+}
+.navbar .nav-item a {
+  padding: 0;
+}
+.navbar .nav-item .nav-link {
+  color: #000000;
+}
+.navbar .nav-item .dropdown-toggle {
+  padding: 0;
+}
+.navbar .nav-item .dropdown-menu {
+  padding: 0.5rem;
+}
+.navbar .nav-item .dropdown-menu li {
+  margin: 0.3rem;
+  border-bottom: 2px solid #ffffff;
+}
+.navbar .nav-item .dropdown-menu li:hover {
+  border-bottom: 2px solid #ef476f;
+}
+.navbar .nav-item .dropdown-menu li a:hover {
+  background-color: #ffffff;
+}
+.navbar #font-size-contrast-buttons {
+  padding: 0;
+}
+.navbar #font-size-contrast-buttons .btn-font-size,
+.navbar #font-size-contrast-buttons .btn-contrast {
+  color: #000000;
+  padding: 0;
+  font-weight: 500;
+  border-radius: 0;
+  margin-bottom: 2px;
+  margin-left: 0.8rem;
+}
+.navbar #font-size-contrast-buttons .btn-font-size:hover,
+.navbar #font-size-contrast-buttons .btn-contrast:hover {
+  margin-bottom: 1px;
+  border-bottom: 2px solid #ef476f;
+}
+.navbar #font-size-contrast-buttons .btn-secondary {
+  font-size: 0.8rem;
+  padding-right: 0;
+}
+.navbar .offcanvas-buttons button {
+  border: 1px solid #000000;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.navbar .offcanvas-buttons .btn-font-size {
+  background-color: #ef476f;
+}
+.navbar .offcanvas-buttons .btn-contrast {
+  background-color: #ffd166;
+}
+
+#separate-navbar {
+  background-color: #00c49a;
+  border-bottom: 1px solid #000000;
+  box-shadow: 0px 1px 4px 0px #000000;
+}
+#separate-navbar #font-size-contrast-buttons .dropdown-toggle {
+  display: block;
+  background-color: #00c49a;
+  color: #000000;
+  border: none;
+}
+
+/*-------------------- Footer --------------------*/
+#footer {
+  background-color: #000000;
+}
+#footer p,
+#footer h2 {
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+#footer #copyright-statement {
+  border-top: 1px solid #ffffff;
+}
+#footer a {
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ef476f;
+  text-decoration-thickness: 2px;
+}
+#footer i {
+  color: #ffffff;
+}
+
+/*-------------------- Home Page --------------------*/
+#home-main {
+  min-height: 0;
+}
+
+#home-hero-image {
+  background-image: url("../images/home-hero-image.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#home-hero-image h1 {
+  text-shadow: 1px 1px #ffffff;
+}
+
+/*-------------------- Sitemap Page --------------------*/
+#sitemap-main li {
+  margin: 0.5rem;
+}
+#sitemap-main a {
+  color: #0000ff;
+  text-decoration: none;
+}
+#sitemap-main a:hover {
+  text-decoration: underline;
+  color: #ef476f;
+}
+
+/*-------------------- Contact Page --------------------*/
+#contact-main form {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
+  padding-top: 0;
+}
+#contact-main form label {
+  text-align: left;
+}
+#contact-main form textarea {
+  height: 13.1rem;
+}
+#contact-main form button {
+  background-color: #ef476f;
+  border: 1px solid #000000;
+  font-weight: 600;
+}
+
+/*-------------------- FAQ Page --------------------*/
+#faq-main .accordion-body p {
+  text-align: left;
+}
+
+/*-------------------- Microsoft Setup --------------------*/
+#microsoft-setup-main .video-tutorials iframe {
+  width: 100%;
+  height: 380px;
+}/*# sourceMappingURL=style.css.map */
