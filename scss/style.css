@@ -239,4 +239,18 @@ header {
 #microsoft-setup-main .video-tutorials iframe {
   width: 100%;
   height: 380px;
+}
+
+/*-------------------- Library Printers --------------------*/
+#library-printers-main .print-photocopy-scan,
+#library-printers-main .cant-log-in {
+  background-color: #f3f3f3;
+}
+#library-printers-main table {
+  border-collapse: collapse;
+}
+#library-printers-main table th,
+#library-printers-main table td {
+  border: 1px solid #000000;
+  padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
