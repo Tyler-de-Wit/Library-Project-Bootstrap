@@ -23,6 +23,25 @@ header {
   height: 70px;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0;
+  left: 5rem;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 99;
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.skip-link:focus {
+  width: auto;
+  height: auto;
+  color: #ff0000;
+  transform: translateY(0%);
+}
+
 .high-contrast {
   color: #000000 !important;
   background-color: #ffffff !important;
@@ -182,7 +201,7 @@ header {
 }
 
 /*-------------------- Home Page --------------------*/
-#home-main {
+.home-main {
   min-height: 0;
 }
 
@@ -197,20 +216,20 @@ header {
 }
 
 /*-------------------- Sitemap Page --------------------*/
-#sitemap-main li {
+.sitemap-main li {
   margin: 0.5rem;
 }
-#sitemap-main a {
+.sitemap-main a {
   color: #0000ff;
   text-decoration: none;
 }
-#sitemap-main a:hover {
+.sitemap-main a:hover {
   text-decoration: underline;
   color: #ef476f;
 }
 
 /*-------------------- Contact Page --------------------*/
-#contact-main form {
+.contact-main form {
   border: 1px solid #000000;
   border-radius: 5px;
   max-width: 1000px;
@@ -218,39 +237,39 @@ header {
   padding: 1rem;
   padding-top: 0;
 }
-#contact-main form label {
+.contact-main form label {
   text-align: left;
 }
-#contact-main form textarea {
+.contact-main form textarea {
   height: 13.1rem;
 }
-#contact-main form button {
+.contact-main form button {
   background-color: #ef476f;
   border: 1px solid #000000;
   font-weight: 600;
 }
 
 /*-------------------- FAQ Page --------------------*/
-#faq-main .accordion-body p {
+.faq-main .accordion-body p {
   text-align: left;
 }
 
 /*-------------------- Microsoft Setup --------------------*/
-#microsoft-setup-main .video-tutorials iframe {
+.microsoft-setup-main .video-tutorials iframe {
   width: 100%;
   height: 380px;
 }
 
 /*-------------------- Library Printers --------------------*/
-#library-printers-main .print-photocopy-scan,
-#library-printers-main .cant-log-in {
+.library-printers-main .print-photocopy-scan,
+.library-printers-main .cant-log-in {
   background-color: #f3f3f3;
 }
-#library-printers-main table {
+.library-printers-main table {
   border-collapse: collapse;
 }
-#library-printers-main table th,
-#library-printers-main table td {
+.library-printers-main table th,
+.library-printers-main table td {
   border: 1px solid #000000;
   padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

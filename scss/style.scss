@@ -31,6 +31,27 @@ header {
     height: 70px;
 }
 
+// Skip link
+.skip-link {
+    position: fixed;
+    top: 0;
+    left: 5rem;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index:99;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+.skip-link:focus {  
+    width: auto;
+    height: auto;
+    color: variables.$red;
+    transform: translateY(0%);
+}
+
+
 // Toggalable style for high contrast buttons
 .high-contrast {
     color: #000000 !important;
@@ -223,7 +244,7 @@ header {
 
 
 /*-------------------- Home Page --------------------*/
-#home-main {
+.home-main {
     min-height: 0;
 }
 
@@ -240,7 +261,7 @@ header {
 
 
 /*-------------------- Sitemap Page --------------------*/
-#sitemap-main {
+.sitemap-main {
     li {
         margin: 0.5rem;
     }
@@ -258,7 +279,7 @@ header {
 
 
 /*-------------------- Contact Page --------------------*/
-#contact-main {
+.contact-main {
     form {
         border: 1px solid #000000;
         border-radius: 5px;
@@ -285,7 +306,7 @@ header {
 
 
 /*-------------------- FAQ Page --------------------*/
-#faq-main {
+.faq-main {
     .accordion-body {
         p {
             text-align: left;
@@ -295,7 +316,7 @@ header {
 
 
 /*-------------------- Microsoft Setup --------------------*/
-#microsoft-setup-main {
+.microsoft-setup-main {
     .video-tutorials {
         iframe {
             width: 100%;
@@ -305,7 +326,7 @@ header {
 }
 
 /*-------------------- Library Printers --------------------*/
-#library-printers-main {
+.library-printers-main {
     .print-photocopy-scan,
     .cant-log-in {
         background-color: variables.$gray;
