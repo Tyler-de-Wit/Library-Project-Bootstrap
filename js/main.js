@@ -66,15 +66,13 @@ const observerLeft = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
 
-            for (let x = 0; x < targetElementsLeft.length; x++) {
-                targetElementsLeft[x].classList.add("fadeInLeft");
-            }
+            entry.target.classList.add("fadeInLeft");
         }
     });
 }, {
     threshold: 0.5 // Trigger when 50% of the element is visible
 });
-// Loop through every element with the class ".animated" and observe it
+// Loop through every element and observe it
 targetElementsLeft.forEach(element => {
     observerLeft.observe(element); // Observe each element individually
 });
@@ -85,9 +83,7 @@ const observerRight = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
 
-            for (let x = 0; x < targetElementsRight.length; x++) {
-                targetElementsRight[x].classList.add("fadeInRight");
-            }
+            entry.target.classList.add("fadeInRight");
         }
     });
 }, {
@@ -103,9 +99,7 @@ const observerTop = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
 
-            for (let x = 0; x < targetElementsTop.length; x++) {
-                targetElementsTop[x].classList.add("fadeInTop");
-            }
+            entry.target.classList.add("fadeInTop");
         }
     });
 }, {
