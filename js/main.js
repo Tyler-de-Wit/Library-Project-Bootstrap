@@ -1,6 +1,11 @@
 // -------------------- Variables -------------------- //
 const rootElement = document.documentElement;
-let fontSize = 16;
+
+// Test if fontSize has been set already in the session as to not override it from another page
+if (typeof sessionStorage.getItem("fontSize") == 'undefined') {
+    sessionStorage.setItem("fontSize", 16);
+}
+
 
 // Declare arrays for document elements
 const htmlElements = ['a', 'abbr', 'address', 'article', 'aside', 'b', 'base', 'bdi', 'bdo', 'blockquote', 'body', 'button', 'caption', 'cite', 'code', 'col', 'colgroup', 'dd', 'details', 'dialog', 'div', 'dl', 'dt', 'em', 'fieldset', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'i', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'menuitem', 'meter', 'nav', 'ol', 'optgroup', 'option', 'p', 'pre', 'q', 'rb', 'rp', 'rt', 'rtc', 'ruby', 's', 'section', 'select', 'small', 'span', 'strong', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'u', 'ul'];
@@ -19,9 +24,13 @@ for (let i = 0; i < htmlElements.length; i++) {
 function increaseFontSize() {
     "use strict"
 
+    let fontSize = sessionStorage.getItem("fontSize");
+    fontSize = Number(fontSize);
+
     if (fontSize < 22) {
         fontSize += 2;
         rootElement.style.fontSize = fontSize + "px";
+        sessionStorage.setItem("fontSize", fontSize);
     }
 }
 
@@ -29,9 +38,13 @@ function increaseFontSize() {
 function decreaseFontSize() {
     "use strict"
 
+    let fontSize = sessionStorage.getItem("fontSize");
+    fontSize = Number(fontSize);
+
     if (fontSize > 10) {
         fontSize -= 2;
         rootElement.style.fontSize = fontSize + "px";
+        sessionStorage.setItem("fontSize", fontSize);
     }
 }
 
@@ -39,6 +52,9 @@ function decreaseFontSize() {
 // Function to increase contrast
 function increaseContrast() {
     "use strict"
+
+    // Set sesion variable to keep state between pages
+    sessionStorage.setItem("contrast", "high");
 
     for (let x = 0; x < elements.length; x++) {
         for (let i = 0; i < elements[x].length; i++) {
@@ -50,6 +66,9 @@ function increaseContrast() {
 // Function to decrease contrast
 function decreaseContrast() {
     "use strict"
+
+    // Set sesion variable to keep state between pages
+    sessionStorage.setItem("contrast", "low");
 
     for (let x = 0; x < elements.length; x++) {
         for (let i = 0; i < elements[x].length; i++) {
@@ -110,9 +129,23 @@ targetElementsTop.forEach(element => {
 });
 
 
-// -------------------- Event listeners -------------------- //
+// -------------------- Event Listeners and Default Behaviour -------------------- //
 function init() {
     'use strict';
+    
+    // Run increase or decrease contrast functions based on state of session varaible
+    if (sessionStorage.getItem("contrast") == "high") {
+        increaseContrast();
+    } else if (sessionStorage.getItem("contrast") == "low") {
+        decreaseContrast();
+    }
+
+    // Set the font size for a new page based on set value from a previous page session variable
+    if (typeof sessionStorage.getItem("fontSize") !== 'undefined') {
+        let fontSize = sessionStorage.getItem("fontSize");
+        fontSize = Number(fontSize);
+        rootElement.style.fontSize = fontSize + "px";
+    }
 
     // Change font size buttons
     document.getElementById('increase-font-size-button').addEventListener('click', increaseFontSize);
