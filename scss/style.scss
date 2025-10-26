@@ -155,7 +155,7 @@ header {
         }
     }
     
-    #font-size-contrast-buttons {
+    .font-size-contrast-buttons {
         padding: 0;
 
         .btn-font-size,
@@ -202,7 +202,7 @@ header {
     border-bottom: 1px solid #000000;
     box-shadow: 0px 1px 4px 0px #000000;
 
-    #font-size-contrast-buttons {
+    .font-size-contrast-buttons {
         .dropdown-toggle {
             display: block;
             background-color: variables.$primary;

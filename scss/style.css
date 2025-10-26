@@ -130,11 +130,11 @@ header {
 .navbar .nav-item .dropdown-menu li a:hover {
   background-color: #ffffff;
 }
-.navbar #font-size-contrast-buttons {
+.navbar .font-size-contrast-buttons {
   padding: 0;
 }
-.navbar #font-size-contrast-buttons .btn-font-size,
-.navbar #font-size-contrast-buttons .btn-contrast {
+.navbar .font-size-contrast-buttons .btn-font-size,
+.navbar .font-size-contrast-buttons .btn-contrast {
   color: #000000;
   padding: 0;
   font-weight: 500;
@@ -142,12 +142,12 @@ header {
   margin-bottom: 2px;
   margin-left: 0.8rem;
 }
-.navbar #font-size-contrast-buttons .btn-font-size:hover,
-.navbar #font-size-contrast-buttons .btn-contrast:hover {
+.navbar .font-size-contrast-buttons .btn-font-size:hover,
+.navbar .font-size-contrast-buttons .btn-contrast:hover {
   margin-bottom: 1px;
   border-bottom: 2px solid #ef476f;
 }
-.navbar #font-size-contrast-buttons .btn-secondary {
+.navbar .font-size-contrast-buttons .btn-secondary {
   font-size: 0.8rem;
   padding-right: 0;
 }
@@ -169,7 +169,7 @@ header {
   border-bottom: 1px solid #000000;
   box-shadow: 0px 1px 4px 0px #000000;
 }
-#separate-navbar #font-size-contrast-buttons .dropdown-toggle {
+#separate-navbar .font-size-contrast-buttons .dropdown-toggle {
   display: block;
   background-color: #00c49a;
   color: #000000;

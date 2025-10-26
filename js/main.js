@@ -1,11 +1,6 @@
 // -------------------- Variables -------------------- //
 const rootElement = document.documentElement;
 
-// Test if fontSize has been set already in the session as to not override it from another page
-if (typeof sessionStorage.getItem("fontSize") == 'undefined') {
-    sessionStorage.setItem("fontSize", 16);
-}
-
 
 // Declare arrays for document elements
 const htmlElements = ['a', 'abbr', 'address', 'article', 'aside', 'b', 'base', 'bdi', 'bdo', 'blockquote', 'body', 'button', 'caption', 'cite', 'code', 'col', 'colgroup', 'dd', 'details', 'dialog', 'div', 'dl', 'dt', 'em', 'fieldset', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'header', 'hgroup', 'i', 'input', 'ins', 'kbd', 'label', 'legend', 'li', 'main', 'mark', 'menu', 'menuitem', 'meter', 'nav', 'ol', 'optgroup', 'option', 'p', 'pre', 'q', 'rb', 'rp', 'rt', 'rtc', 'ruby', 's', 'section', 'select', 'small', 'span', 'strong', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'tr', 'u', 'ul'];
@@ -16,6 +11,17 @@ for (let i = 0; i < htmlElements.length; i++) {
     let element = htmlElements[i];
     let selector = document.querySelectorAll(element);
     elements.push(selector);
+}
+
+
+// Test if fontSize has been set already in the session as to not override it from another page if it has not been set then set the session variable to 16 and apply it to the page
+const sessionKeyFontSize = sessionStorage.getItem("fontSize");
+if (sessionKeyFontSize === null) {
+    sessionStorage.setItem("fontSize", 16);
+
+    let fontSize = sessionStorage.getItem("fontSize");
+    fontSize = Number(fontSize);
+    rootElement.style.fontSize = fontSize + "px";
 }
 
 
@@ -46,6 +52,14 @@ function decreaseFontSize() {
         rootElement.style.fontSize = fontSize + "px";
         sessionStorage.setItem("fontSize", fontSize);
     }
+}
+
+// Function to reset root font size
+function resetFontSize() {
+    "use strict"
+
+    sessionStorage.setItem("fontSize", "16");
+    rootElement.style.fontSize = "16px";
 }
 
 
@@ -140,18 +154,22 @@ function init() {
         decreaseContrast();
     }
 
-    // Set the font size for a new page based on set value from a previous page session variable
-    if (typeof sessionStorage.getItem("fontSize") !== 'undefined') {
+    // Set the font size for a new page based on the value set in the session variable from a previous page
+    const sessionKeyFontSize = sessionStorage.getItem("fontSize");
+    if (sessionKeyFontSize !== null) {
         let fontSize = sessionStorage.getItem("fontSize");
         fontSize = Number(fontSize);
         rootElement.style.fontSize = fontSize + "px";
     }
 
+
     // Change font size buttons
     document.getElementById('increase-font-size-button').addEventListener('click', increaseFontSize);
     document.getElementById('decrease-font-size-button').addEventListener('click', decreaseFontSize);
+    document.getElementById('reset-font-size-button').addEventListener('click', resetFontSize);
     document.getElementById('offcanvas-increase-font-size-button').addEventListener('click', increaseFontSize);
     document.getElementById('offcanvas-decrease-font-size-button').addEventListener('click', decreaseFontSize);
+    document.getElementById('offcanvas-reset-font-size-button').addEventListener('click', resetFontSize);
 
     // Change contrast buttons
     document.getElementById('increase-contrast-button').addEventListener('click', increaseContrast);

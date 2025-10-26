@@ -78,31 +78,36 @@
                     </div>
                 </div>
 
-                <div class="col-2 d-flex justify-content-end" id="font-size-contrast-buttons">
+                <div class="font-size-contrast-buttons col-2 d-flex justify-content-end">
                     <!-- Toggler for offcanvas menu -->
                     <button class="navbar-toggler d-xxl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="container collapse navbar-collapse justify-content-end" id="font-size-contrast-buttons">
+                    <div class="font-size-contrast-buttons container collapse navbar-collapse justify-content-end">
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 Change Font Size
                             </button>
                             <ul class="dropdown-menu">
                                 <!-- Font Size Buttons -->
-                                <button class="btn btn-font-size" type="button" id="increase-font-size-button">Increase Font Size</button>
-                                <button class="btn btn-font-size" type="button" id="decrease-font-size-button">Decrease Font Size</button>
+                                <li>
+                                    <button class="btn btn-font-size" type="button" id="increase-font-size-button">Increase Font Size</button>
+                                    <button class="btn btn-font-size" type="button" id="decrease-font-size-button">Decrease Font Size</button>
+                                    <button class="btn btn-font-size" type="button" id="reset-font-size-button">Reset Font Size</button>
+                                </li>
                             </ul>
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
                                 Change Colour Contrast
                             </button>
                             <ul class="dropdown-menu">
                                 <!-- Contrast Buttons -->
-                                <button class="btn btn-contrast" type="button" id="increase-contrast-button">Increase Contrast</button>
-                                <button class="btn btn-contrast" type="button" id="decrease-contrast-button">Decrease Contrast</button>
+                                <li>
+                                    <button class="btn btn-contrast" type="button" id="increase-contrast-button">Increase Contrast</button>
+                                    <button class="btn btn-contrast" type="button" id="decrease-contrast-button">Reset Contrast</button>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -171,10 +176,11 @@
                     <div class="col">
                         <button class="btn btn-font-size" type="button" id="offcanvas-increase-font-size-button">Increase Font Size</button>
                         <button class="btn btn-contrast" type="button" id="offcanvas-increase-contrast-button">Increase Contrast</button>
+                        <button class="btn btn-font-size" type="button" id="offcanvas-reset-font-size-button">Reset Font Size</button>
                     </div>
                     <div class="col">
                         <button class="btn btn-font-size" type="button" id="offcanvas-decrease-font-size-button">Decrease Font Size</button>
-                        <button class="btn btn-contrast" type="button" id="offcanvas-decrease-contrast-button">Decrease Contrast</button>
+                        <button class="btn btn-contrast" type="button" id="offcanvas-decrease-contrast-button">Reset Contrast</button>
                     </div>
                 </div>                
             </div>
