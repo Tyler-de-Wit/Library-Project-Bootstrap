@@ -21,14 +21,18 @@ main {
     min-height: 95vh;
 }
 
+header {
+    height: 70px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
 .search-form {
     input {
         width: 30vw;
     }
-}
-
-header {
-    height: 70px;
 }
 
 // Skip link
@@ -51,13 +55,6 @@ header {
     transform: translateY(0%);
 }
 
-
-// Toggalable style for high contrast buttons
-.high-contrast {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-}
-
 // Style to make warning text red
 .warning-text {
     color: #ff0000;
@@ -66,6 +63,12 @@ header {
 // Style to make important text bold
 .bold-text {
     font-weight: bold;
+}
+
+// Toggalable style for high contrast buttons
+.high-contrast {
+    background-color: #000000 !important;
+    color: #ffffff !important;
 }
 
 // Styles for animation on scroll
@@ -174,7 +177,6 @@ header {
         }
 
         .btn-secondary {
-            font-size: 0.8rem;
             padding-right: 0;
         }
     }
@@ -246,6 +248,16 @@ header {
 /*-------------------- Home Page --------------------*/
 .home-main {
     min-height: 0;
+
+    .btn-primary {
+        background-color: variables.$accent;
+        border-color: #000000;
+        color: #000000;
+
+        &:hover {
+            opacity: 70%;
+        }
+    }
 }
 
 #home-hero-image {
@@ -253,10 +265,6 @@ header {
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
-
-    h1 {
-        text-shadow: 1px 1px #ffffff;
-    }
 }
 
 

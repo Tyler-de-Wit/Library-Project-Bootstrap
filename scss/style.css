@@ -15,12 +15,16 @@ main {
   min-height: 95vh;
 }
 
-.search-form input {
-  width: 30vw;
-}
-
 header {
   height: 70px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.search-form input {
+  width: 30vw;
 }
 
 .skip-link {
@@ -42,17 +46,17 @@ header {
   transform: translateY(0%);
 }
 
-.high-contrast {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
-
 .warning-text {
   color: #ff0000;
 }
 
 .bold-text {
   font-weight: bold;
+}
+
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
 
 .fadeInLeft {
@@ -148,7 +152,6 @@ header {
   border-bottom: 2px solid #ef476f;
 }
 .navbar .font-size-contrast-buttons .btn-secondary {
-  font-size: 0.8rem;
   padding-right: 0;
 }
 .navbar .offcanvas-buttons button {
@@ -204,15 +207,20 @@ header {
 .home-main {
   min-height: 0;
 }
+.home-main .btn-primary {
+  background-color: #ef476f;
+  border-color: #000000;
+  color: #000000;
+}
+.home-main .btn-primary:hover {
+  opacity: 70%;
+}
 
 #home-hero-image {
   background-image: url("../images/home-hero-image.jpg");
   height: 70vh;
   background-size: cover;
   background-repeat: no-repeat;
-}
-#home-hero-image h1 {
-  text-shadow: 1px 1px #ffffff;
 }
 
 /*-------------------- Sitemap Page --------------------*/
