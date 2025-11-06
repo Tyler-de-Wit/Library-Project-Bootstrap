@@ -55,6 +55,46 @@ h1 {
     transform: translateY(0%);
 }
 
+// Scroll to top button
+#scroll-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: 1px solid #000000;
+    outline: none;
+    background-color: variables.$secondary;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: variables.$accent;
+    }
+
+    &:active {
+        transform: translateY(5px);
+    }
+
+    &::after {
+        content: ' Back To Top';
+    }
+}
+
+@media screen and (max-width: 766px) {
+    #scroll-to-top-button {
+        &::after {
+            content: '';
+        }
+    }
+}
+
+.display-none {
+    display: none;
+}
+
 // Style to make warning text red
 .warning-text {
     color: #ff0000;
@@ -179,6 +219,15 @@ h1 {
         .btn-secondary {
             padding-right: 0;
         }
+
+        .dropdown-menu {
+            button {
+                &:focus {
+                    border: 2px solid #000000;
+                    border-radius: 4px;
+                }
+            }
+        }
     }
 
     .offcanvas-buttons {
@@ -256,6 +305,10 @@ h1 {
 
         &:hover {
             opacity: 70%;
+        }
+
+        &:active {
+            transform: translateY(5px);
         }
     }
 }
@@ -348,12 +401,32 @@ h1 {
             padding: 0.5rem;
         }
     }
+
+    iframe {
+        width: 100%;
+        height: 380px;
+    }
 }
 
-/*-------------------- Library Printers --------------------*/
+/*-------------------- Email Tips --------------------*/
 .email-tips-main {
     li {
         line-height: 2;
     }
 }
 
+/*-------------------- Access Blackboard --------------------*/
+.access-blackboard-main {
+    iframe {
+        width: 100%;
+        height: 380px;
+    }
+}
+
+/*-------------------- Locating Timetable --------------------*/
+.locating-timetable-main {
+    iframe {
+        width: 100%;
+        height: 380px;
+    }
+}

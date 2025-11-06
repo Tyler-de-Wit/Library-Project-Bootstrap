@@ -25,10 +25,21 @@ if (sessionKeyFontSize === null) {
 }
 
 
+// -------------------- Scroll to top of page -------------------- //
+// Function to scroll to top of the page
+function scrollToTop() {
+    'use strict';
+
+    // When the user clicks on the button, scroll to the top of the document
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
 // -------------------- Change Font Size And Contrast -------------------- //
 // Function to increase root font size
 function increaseFontSize() {
-    "use strict"
+    'use strict'
 
     let fontSize = sessionStorage.getItem("fontSize");
     fontSize = Number(fontSize);
@@ -42,7 +53,7 @@ function increaseFontSize() {
 
 // Function to decrease root font size
 function decreaseFontSize() {
-    "use strict"
+    'use strict'
 
     let fontSize = sessionStorage.getItem("fontSize");
     fontSize = Number(fontSize);
@@ -56,7 +67,7 @@ function decreaseFontSize() {
 
 // Function to reset root font size
 function resetFontSize() {
-    "use strict"
+    'use strict'
 
     sessionStorage.setItem("fontSize", "16");
     rootElement.style.fontSize = "16px";
@@ -65,7 +76,7 @@ function resetFontSize() {
 
 // Function to increase contrast
 function increaseContrast() {
-    "use strict"
+    'use strict'
 
     // Set sesion variable to keep state between pages
     sessionStorage.setItem("contrast", "high");
@@ -79,7 +90,7 @@ function increaseContrast() {
 
 // Function to decrease contrast
 function decreaseContrast() {
-    "use strict"
+    'use strict'
 
     // Set sesion variable to keep state between pages
     sessionStorage.setItem("contrast", "low");
@@ -162,6 +173,24 @@ function init() {
         rootElement.style.fontSize = fontSize + "px";
     }
 
+
+    // Showing and hiding scroll to top button based on users scroll position
+    let scrollToTopButton = document.getElementById("scroll-to-top-button");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {showScrollButton()};
+    
+    function showScrollButton() {        
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    }
+
+    
+    // Scroll to top button
+    document.getElementById('scroll-to-top-button').addEventListener('click', scrollToTop);
 
     // Change font size buttons
     document.getElementById('increase-font-size-button').addEventListener('click', increaseFontSize);
